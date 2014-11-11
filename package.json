@@ -1,0 +1,31 @@
+{
+  "name": "gitRacer",
+  "version": "1.0.0",
+  "description": "Gamification of Github Commits",
+  "main": "gitracer.js",
+  "scripts": {
+    "test": "jasmine-node --verbose",
+    "mocha": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zrasool88/gitRacer.git"
+  },
+  "author": "Tim Scully, Ana Isabel Nogal, Elena Garrone, Zeeshan Rasool",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zrasool88/gitRacer/issues"
+  },
+  "homepage": "https://github.com/zrasool88/gitRacer",
+  "dependencies": {
+    "express": "^4.10.2",
+    "express-ejs-layouts": "^1.1.0",
+    "socket.io": "^1.2.0"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "jasmine-node": "^1.14.5",
+    "mocha": "^2.0.1",
+    "zombie": "^2.1.1"
+  }
+}
