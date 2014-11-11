@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/zrasool88/gitRacer/issues"
   },
-  "homepage": "https://github.com/zrasool88/gitRacer"
+  "homepage": "https://github.com/zrasool88/gitRacer",
+  "dependencies": {
+    "express": "^4.10.2"
+  }
 }
