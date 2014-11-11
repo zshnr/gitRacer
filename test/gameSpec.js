@@ -4,7 +4,7 @@ var chai = require('chai');
 var expect = chai.expect;
 var Browser = require('zombie')
 
-describe('the homepage', function(){
+describe('homepage', function(){
   var browser;
 
   before(function(){
@@ -16,11 +16,18 @@ describe('the homepage', function(){
     browser.visit('/', done);
   });
 
-  it("should visit the page", function() {
-    expect(browser.success).to.be.true;
-  });
+    it("should visit the page", function() {
+      expect(browser.success).to.be.true;
+    });
 
     it("should have content 'Git Racer'", function(){
       expect(browser.text('h1')).to.equal('Welcome to Git Racer');
     });
+
+    it('should show an error when pressing start without filling the username field', function(){
+      browser.clickLink('#fetch_github_profile', function(){
+        expect(browser.text('p')).to.equal('You have to enter a username');
+      });
+    });
+
 });

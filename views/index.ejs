@@ -1,1 +1,15 @@
 <h1>Welcome to Git Racer</h1>
+<section>
+  <input type='text' id='profile_name' placeholder='Enter your github username' onfocus="if(this.value!=='Enter your github username')this.value=''"/>
+  <a href='#' id='fetch_github_profile'>Start</a>
+  <p id='error_missing_field'> </p>
+</section>
+<script type='text/javascript'>
+  $('#fetch_github_profile').on('click', function(){
+    if ($('#profile_name').val() == ''){
+      $('#error_missing_field').html('You have to enter a username');
+    }
+
+  });
+
+</script>
