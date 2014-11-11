@@ -4,7 +4,8 @@
   "description": "Gamification of Github Commits",
   "main": "gitracer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-node --verbose",
+    "mocha": "mocha"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,14 @@
   },
   "homepage": "https://github.com/zrasool88/gitRacer",
   "dependencies": {
-    "express": "^4.10.2"
+    "express": "^4.10.2",
+    "express-ejs-layouts": "^1.1.0",
+    "socket.io": "^1.2.0"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "jasmine-node": "^1.14.5",
+    "mocha": "^2.0.1",
+    "zombie": "^2.1.1"
   }
 }

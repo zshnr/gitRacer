@@ -2,87 +2,23 @@
 1 verbose cli [ '/Users/forsee/.nvm/v0.10.33/bin/node',
 1 verbose cli   '/Users/forsee/.nvm/v0.10.33/bin/npm',
 1 verbose cli   'install',
-1 verbose cli   'expressjs',
-1 verbose cli   '--save' ]
+1 verbose cli   '--save-dev',
+1 verbose cli   'chai' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
-4 verbose readDependencies using package.json deps
-5 verbose cache add [ 'expressjs', null ]
-6 verbose cache add name=undefined spec="expressjs" args=["expressjs",null]
-7 verbose parsed url { protocol: null,
-7 verbose parsed url   slashes: null,
-7 verbose parsed url   auth: null,
-7 verbose parsed url   host: null,
-7 verbose parsed url   port: null,
-7 verbose parsed url   hostname: null,
-7 verbose parsed url   hash: null,
-7 verbose parsed url   search: null,
-7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'expressjs',
-7 verbose parsed url   path: 'expressjs',
-7 verbose parsed url   href: 'expressjs' }
-8 silly lockFile 641f587e-expressjs expressjs
-9 verbose lock expressjs /Users/forsee/.npm/641f587e-expressjs.lock
-10 silly lockFile 641f587e-expressjs expressjs
-11 silly lockFile 641f587e-expressjs expressjs
-12 verbose addNamed [ 'expressjs', '' ]
-13 verbose addNamed [ null, '*' ]
-14 silly lockFile 04250d81-expressjs expressjs@
-15 verbose lock expressjs@ /Users/forsee/.npm/04250d81-expressjs.lock
-16 silly addNameRange { name: 'expressjs', range: '*', hasData: false }
-17 verbose request where is /expressjs
-18 verbose request registry https://registry.npmjs.org/
-19 verbose request id 96be712909a35c70
-20 verbose url raw /expressjs
-21 verbose url resolving [ 'https://registry.npmjs.org/', './expressjs' ]
-22 verbose url resolved https://registry.npmjs.org/expressjs
-23 verbose request where is https://registry.npmjs.org/expressjs
-24 info trying registry request attempt 1 at 11:40:33
-25 http GET https://registry.npmjs.org/expressjs
-26 http 404 https://registry.npmjs.org/expressjs
-27 verbose headers { date: 'Tue, 11 Nov 2014 11:40:34 GMT',
-27 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 verbose headers   'content-type': 'application/json',
-27 verbose headers   'cache-control': 'max-age=0',
-27 verbose headers   'content-length': '52',
-27 verbose headers   'accept-ranges': 'bytes',
-27 verbose headers   via: '1.1 varnish',
-27 verbose headers   age: '0',
-27 verbose headers   'x-served-by': 'cache-lcy1121-LCY',
-27 verbose headers   'x-cache': 'MISS',
-27 verbose headers   'x-cache-hits': '0',
-27 verbose headers   'x-timer': 'S1415706033.887786,VS0,VE154',
-27 verbose headers   'keep-alive': 'timeout=10, max=50',
-27 verbose headers   connection: 'Keep-Alive' }
-28 silly registry.get cb [ 404,
-28 silly registry.get   { date: 'Tue, 11 Nov 2014 11:40:34 GMT',
-28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-28 silly registry.get     'content-type': 'application/json',
-28 silly registry.get     'cache-control': 'max-age=0',
-28 silly registry.get     'content-length': '52',
-28 silly registry.get     'accept-ranges': 'bytes',
-28 silly registry.get     via: '1.1 varnish',
-28 silly registry.get     age: '0',
-28 silly registry.get     'x-served-by': 'cache-lcy1121-LCY',
-28 silly registry.get     'x-cache': 'MISS',
-28 silly registry.get     'x-cache-hits': '0',
-28 silly registry.get     'x-timer': 'S1415706033.887786,VS0,VE154',
-28 silly registry.get     'keep-alive': 'timeout=10, max=50',
-28 silly registry.get     connection: 'Keep-Alive' } ]
-29 silly lockFile 04250d81-expressjs expressjs@
-30 silly lockFile 04250d81-expressjs expressjs@
-31 error 404 404 Not Found: expressjs
-31 error 404
-31 error 404 'expressjs' is not in the npm registry.
-31 error 404 You should bug the author to publish it
-31 error 404 It was specified as a dependency of 'gitRacer'
-31 error 404
-31 error 404 Note that you can also install from a
-31 error 404 tarball, folder, or http url, or git url.
-32 error System Darwin 14.0.0
-33 error command "/Users/forsee/.nvm/v0.10.33/bin/node" "/Users/forsee/.nvm/v0.10.33/bin/npm" "install" "expressjs" "--save"
-34 error cwd /Users/forsee/makers/course/gitRacer
-35 error node -v v0.10.33
-36 error npm -v 1.4.28
-37 error code E404
-38 verbose exit [ 1, true ]
+4 error Failed to parse json
+4 error Unexpected token }
+5 error File: /Users/forsee/makers/course/gitRacer/package.json
+6 error Failed to parse package.json data.
+6 error package.json must be actual JSON, not just JavaScript.
+6 error
+6 error This is not a bug in npm.
+6 error Tell the package author to fix their package.json file. JSON.parse
+7 error System Darwin 14.0.0
+8 error command "/Users/forsee/.nvm/v0.10.33/bin/node" "/Users/forsee/.nvm/v0.10.33/bin/npm" "install" "--save-dev" "chai"
+9 error cwd /Users/forsee/makers/course/gitRacer
+10 error node -v v0.10.33
+11 error npm -v 1.4.28
+12 error file /Users/forsee/makers/course/gitRacer/package.json
+13 error code EJSONPARSE
+14 verbose exit [ 1, true ]
