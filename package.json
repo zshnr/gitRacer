@@ -4,7 +4,7 @@
   "description": "Gamification of Github Commits",
   "main": "gitracer.js",
   "scripts": {
-    "test": "jasmine-node --verbose",
+    "test": "jasmine-node spec --verbose",
     "mocha": "mocha"
   },
   "repository": {
