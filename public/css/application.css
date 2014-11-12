@@ -1,118 +1,58 @@
 body {
   font-family: 'Muli', sans-serif;
   color: white;
-  background: url("/images/Git-background.jpg") no-repeat center center fixed;
+  background: url("/images/back1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-
-
-/*@import url(http://fonts.googleapis.com/css?family=Bree+Serif);*/
-
-/*******************
-SELECTION STYLING
-*******************/
-
-::selection {
-  color: #fff;
-  background: #f676b2; /* Safari */
-}
-::-moz-selection {
-  color: #fff;
-  background: #f676b2; /* Firefox */
+#content h1 {
+  display:none;
+  text-align: center;
 }
 
-/*******************
-BODY STYLING
-*******************/
-
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
+h1 {
+  font-size: 4.5em;
 }
 
-/*body {
-  background: url('http://www.demo.amitjakhu.com/login-form/images/bg.png');
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight:300;
-  text-align: left;
-  text-decoration: none;
-  height: 500px;
-}*/
-
-#wrapper {
-  /* Center wrapper perfectly */
-  width: 300px;
-  height: 400px;
-  margin: 70px auto;
-}
-
-/* Download Button (Demo Only) */
-.download {
-  display: block;
-  position: absolute;
-  float: right;
-  right: 25px;
-  bottom: 25px;
-  padding: 5px;
-
-  font-weight: bold;
-  font-size: 11px;
-  text-align: right;
-  text-decoration: none;
-  color: rgba(0,0,0,0.5);
-  text-shadow: 1px 1px 0 rgba(256,256,256,0.5);
-}
-
-.download:hover {
-  color: rgba(0,0,0,0.75);
-  text-shadow: 1px 1px 0 rgba(256,256,256,0.5);
-}
-
-.download:focus {
-  bottom: 24px;
-}
-
-/*
-.gradient {
-  width: 600px;
-  height: 600px;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  margin-left: -300px;
-  margin-top: -300px;
-
-  background: url(http://www.demo.amitjakhu.com/login-form/images/gradient.png) no-repeat;
+/*h1{
+  text-align: center;
 }
 */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
 
-.gradient {
-  /* Center Positioning */
-  width: 600px;
-  height: 600px;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  margin-left: -300px;
-  margin-top: -300px;
-  z-index: -2;
-
-  /* Fallback */
-  background-image: url(http://www.demo.amitjakhu.com/login-form/images/gradient.png);
-  background-repeat: no-repeat;
-
-  /* CSS3 Gradient */
-  background-image: -webkit-gradient(radial, 0% 0%, 0% 100%, from(rgba(213,246,255,1)), to(rgba(213,246,255,0)));
-  background-image: -webkit-radial-gradient(50% 50%, 40% 40%, rgba(213,246,255,1), rgba(213,246,255,0));
-  background-image: -moz-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
-  background-image: -ms-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
-  background-image: -o-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
+@-webkit-keyframes fadeInDownBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1000px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@keyframes fadeInDownBig {
+    0% {
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fadeInDownBig {
+    -webkit-animation-name: fadeInDownBig;
+    animation-name: fadeInDownBig;
 }
 
 /*******************
@@ -134,7 +74,7 @@ LOGIN FORM
 }
 
 /*******************
-HEADER
+LOGIN HEADER
 *******************/
 
 .login-form .header {
@@ -159,7 +99,7 @@ HEADER
 }
 
 /*******************
-CONTENT
+LOGIN CONTENT
 *******************/
 
 .login-form .content {
@@ -171,8 +111,6 @@ CONTENT
   /* height: 15px; */
   width: 188px;
   padding: 15px 25px;
-
-/*  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
   font-weight: 400;
   font-size: 14px;
   color: #9d9e9e;
@@ -188,25 +126,8 @@ CONTENT
 }
 
 /* Second input field */
-.login-form .content .password, .login-form .content .pass-icon {
-  margin-top: 25px;
-}
 
-.login-form .content .input:hover {
-  background: #dfe9ec;
-  color: #414848;
-}
-
-.login-form .content .input:focus {
-  background: #dfe9ec;
-  color: #414848;
-
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
-}
-
-.user-icon, .pass-icon {
+.user-icon {
   width: 46px;
   height: 47px;
   display: block;
@@ -227,11 +148,6 @@ CONTENT
   no-repeat center;
 }
 
-.pass-icon {
-  /*top:201px;*/
-  background: url(http://www.demo.amitjakhu.com/login-form/images/pass-icon.png) no-repeat center;
-}
-
 .content input:focus + div{
   left: -46px;
 }
@@ -246,7 +162,7 @@ CONTENT
 }
 
 /*******************
-FOOTER
+LOGIN FOOTER
 *******************/
 
 .login-form .footer {
@@ -265,7 +181,7 @@ FOOTER
 .login-form .footer .button {
   padding: 11px 95px;
 
-  font-family: 'Bree Serif', serif;
+  /*font-family: 'Bree Serif', serif;*/
   font-weight: 300;
   font-size: 18px;
   color: #fff;
