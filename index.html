@@ -1,0 +1,25 @@
+<html>
+  <head></head>
+  <body>
+    <main>
+      <section>
+        <input type='text' id='profile_name'/>
+        <a href='#' id='fetch_github_profile'>Fetch</a>
+      </section>
+        <article>
+          <header>
+          </header>
+        </article>
+    </main>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+      $('#fetch_github_profile').on('click', function() {
+        var profile_name = $('#profile_name').val();
+        $.get('https://api.github.com/users/' + profile_name, function(data) {
+          console.log(data);
+          $('article header').append('<img src="'+data['avatar_url']+'"/>');
+        });
+      });
+    </script>
+  </body>
+  </html>
