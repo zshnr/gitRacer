@@ -15,8 +15,13 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
+app.set('port', (process.env.PORT || 3000))
+
 module.exports = server
 if (!module.parent) {
   console.log('Server running on http://localhost:3000')
-  server.listen(3000)
+  server.listen(app.get('port'), function() {
+    console.log("Node app is running at localhost:" + app.get('port'))
+  })
+
 }
