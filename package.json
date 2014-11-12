@@ -4,7 +4,7 @@
   "description": "Gamification of Github Commits",
   "main": "gitracer.js",
   "scripts": {
-    "test": "jasmine-node --verbose",
+    "test": "jasmine-node spec --verbose",
     "mocha": "mocha"
   },
   "repository": {
@@ -29,6 +29,7 @@
     "chai": "^1.10.0",
     "jasmine-node": "^1.14.5",
     "mocha": "^2.0.1",
+    "sinon": "^1.11.1",
     "zombie": "^2.1.1"
   }
 }
