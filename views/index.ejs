@@ -22,8 +22,7 @@
 
 <form class="sign-in">
   <input name="username" type="text" class="username_input" placeholder="GitHub Username..." />
-          <div class="user-icon"></div>
-  <input type="submit" value="RACE!!!"/>
+  <input id="sign-in-button" type="submit" value="RACE!!!"/>
 </form>
 
 
@@ -36,7 +35,7 @@
         <div class="tipWrap">
       <span class="tip"></span>
         </div>
-        <span class="fill" data-percentage="50"></span>
+        <span class="fill" data-percentage="20"></span>
     </div>
 
     <div id="bar2" class="barfiller">
@@ -78,14 +77,23 @@
 
       $('#content h1').fadeIn(3000);
 
-      $('#octocat').on('click', function() {
-          $('#octocat').fadeOut(2000, function() {
-            $('.sign-in').fadeIn(2000);
+        $('#octocat').on('click', function() {
+            $('#octocat').fadeOut(1500, function() {
+              $('#octocat').remove();
+              $('.sign-in').fadeIn(1500, function() {
+            });
+        });
+
+          $('#sign-in-button').on('click', function(event) {
+            event.preventDefault();
+              $('.sign-in').fadeOut(1500, function() {
+              $('#bar1').delay(350).fadeIn();
+              $('#bar2').delay(750).fadeIn();
+              $('#bar3').delay(1250).fadeIn();
+              $('#bar4').delay(1750).fadeIn();
+              });
           });
-
       });
-
-
     });
   </script>
 
