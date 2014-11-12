@@ -20,3 +20,9 @@ if (!module.parent) {
   console.log('Server running on http://localhost:3000')
   server.listen(3000)
 }
+
+io.on('connection', function(socket) {
+  setInterval(function() {
+    socket.emit('updateCommit', )
+  }, 1000);
+});

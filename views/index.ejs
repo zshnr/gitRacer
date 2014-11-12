@@ -1,29 +1,101 @@
-
-<!-- <h2>Welcome to Git Racer</h2> -->
-
-<!-- <div id="animated-example" class="animated fadeInDownBig">
-  <h1>Welcome to Git Racer</h1>
-</div> -->
-
-
-
+<!-- ================
+        HEADING
+     ================ -->
 <section id="content">
   <h1>Welcome to Git Racer</h1>
 </section>
 
+
+
+<!-- ================
+        MAIN IMAGE
+     ================ -->
   <section id="octocat">
     <img src="/images/cat2.png">
   </section>
 
 
+<!-- =====================
+          SIGN IN FORM
+     ===================== -->
+
+
+<form class="sign-in">
+  <input name="username" type="text" class="username_input" placeholder="GitHub Username..." />
+          <div class="user-icon"></div>
+  <input type="submit" value="RACE!!!"/>
+</form>
+
+
+
+<!-- ================
+        BAR FILLER
+     ================ -->
+<section class="bars">
+  <div id="bar1" class="barfiller">
+        <div class="tipWrap">
+      <span class="tip"></span>
+        </div>
+        <span class="fill" data-percentage="50"></span>
+    </div>
+
+    <div id="bar2" class="barfiller">
+        <div class="tipWrap">
+      <span class="tip"></span>
+        </div>
+        <span class="fill" data-percentage="10"></span>
+    </div>
+
+    <div id="bar3" class="barfiller">
+        <div class="tipWrap">
+      <span class="tip"></span>
+        </div>
+        <span class="fill" data-percentage="75"></span>
+    </div>
+
+    <div id="bar4" class="barfiller">
+        <div class="tipWrap">
+      <span class="tip"></span>
+        </div>
+        <span class="fill" data-percentage="95"></span>
+    </div>
+  </div>
+</section>
 
 
 
 
-<script>
-$(document).ready(function() {
+<!--  =================
+          JQUERY
+      ================= -->
+  <script src="js/jquery.barfiller.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#bar1').barfiller();
+      $('#bar2').barfiller();
+      $('#bar3').barfiller({ barColor: '#fc6' });
+      $('#bar4').barfiller({ barColor: '#900', duration: 3000 })
 
-  $('#content h1').fadeIn(3000);
+      $('#content h1').fadeIn(3000);
 
-});
-</script>
+      $('#octocat').on('click', function() {
+          $('#octocat').fadeOut(2000, function() {
+            $('.sign-in').fadeIn(2000);
+          });
+
+      });
+
+
+    });
+  </script>
+
+
+  <script>
+    var socket = io.connect('http://localhost')
+    socket.on('updateCommit', function(data) {
+      $('.fill').attr()
+    });
+  </script>
+
+
+
