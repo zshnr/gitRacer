@@ -35,16 +35,15 @@ GhApiConnector.prototype.validateUserName = function(username, callback) {
   });
 };
 
-GhApiConnector.prototype.getCommits = function(username) {
-  var GitHubCommits = require("github-commits");
+GhApiConnector.prototype.getCommits = function(username, callback) {
+  // var GitHubCommits = require("github-commits");
+  console.log('right here')
   var commits = this.github.forUser(username)
               .commitsSince("2014-11-11T23:59:59Z")
               .sumCommits(function(sum){
-                // console.log(sum);
+                console.log(sum);
+               callback(sum);
               });
-
-
-  
 };
 
 // GhApiConnector.prototype.getCommits = function(username) {

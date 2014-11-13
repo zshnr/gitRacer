@@ -44,9 +44,18 @@ io.on('connection', function(socket){
 		console.log("I'm entering validate user")
 		console.log(username)
 		connector.validateUserName(username, function(valid){
-			socket.emit('validate result', valid);	
+
+			console.log('validating results')
+			socket.emit('validate result', valid);
+				setInterval(function() {
+
+				console.log('getting commits for ' + username)
+				connector.getCommits(username, function(commits){
+					console.log('commits ' + commits)
+					socket.emit('commits', commits);
+				});
+			}, 10000);
 		});
-		
 	});
 });
 
