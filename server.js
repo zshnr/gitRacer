@@ -12,7 +12,7 @@ app.use(expressLayouts);
 app.use(require('express').static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-  res.render('index');
+  res.render('layout');
 });
 
 app.set('port', (process.env.PORT || 3000))
