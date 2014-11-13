@@ -3,7 +3,6 @@ var connector = require('../src/ghApiConnector');
 var chai = require('chai');
 var expect = chai.expect;
 var Browser = require('zombie');
-var sinon = require('sinon');
 var ghapiconnector = new connector();
 
 describe('GitHub API Connector', function(){

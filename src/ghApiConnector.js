@@ -1,56 +1,86 @@
 function GhApiConnector(){
   this.client_id = process.env.GITHUB_CLIENT_ID;
   this.client_secret = process.env.GITHUB_CLIENT_SECRET;
-  this.gitUrlUsers = 'https://api.github.com/users/';
+  //this.gitUrlUsers = 'https://api.github.com/users/';
+   var GitHubCommits = require("github-commits");
+
+  var gitHubUrl = "https://api.github.com";
+  var apiAuthorizationKey = 'bf26f98fce6025767afb543fe78da47096a5d347';
+
+  //Can specify the GitHub api authorization key for the private or enterprise instance
+  this.github = new GitHubCommits(apiAuthorizationKey,gitHubUrl);
 };
 
-GhApiConnector.prototype.checkUserName = function(username) {
-  var ghprofuri = gitUrlUsers + username + '?client_id=' + this.client_id +'&client_secret='+ this.client_secret;
 
-  $.ajax({
-    url: ghprofuri,
-    type: 'GET',
-    data_type: 'json',
-    success: function(githubProfile){
-            return true;
-          },
-    error: function() { return false}
+GhApiConnector.prototype.validateUserName = function(username) {
+  var githubUserApi = require('github');
+  var githubUser = new githubUserApi({
+    // required
+    version: "3.0.0",
+    // optional
+    debug: true,
+    protocol: "https",
+    // host: "github.my-GHE-enabled-company.com",
+    // pathPrefix: "/api/v3", // for some GHEs
+    timeout: 5000
+  });
+
+  githubUser.user.getFrom({user: username}, function(err, data){
+    if (err) {
+      return false;
+    }
+    else {
+       return true;
+    }
+    
   });
 };
 
 GhApiConnector.prototype.getCommits = function(username) {
-  var ghrepouri = gitUrlUsers + this.username + '/repos?per_page=100&client_id='+client_id+'&client_secret='+client_secret;
-  $.getJSON(ghrepouri, function(json){
-    repositories = json;
-    if(repositories.length === 0)
-      {return -1;}
-    else{
-      var commitsNumber=0;
-      $.each(repositories, function (index){
-        var repoName =repositories[index].name;
-        var noMoreEvents = false;
-        for(var i=1; i < 11; i++){
-          $.getJSON('https://api.github.com/repos/'+ username +'/'+repoName+'/events?page='+ i +'&client_id='+this.client_id+'&client_secret='+ this.client_secret ,
-          function (events){
-            if(events.length === 0 ){
-              noMoreEvents = true;
-            }
-            else{
-              $.each(events, function (index){
-                if(events[index]['type'] == 'PushEvent'){
-                  commits = events[index]['payload']['commits'];
-                  commitsNumber += commits.length;
-                }
+  var GitHubCommits = require("github-commits");
+  var commits = this.github.forUser(username)
+              .commitsSince("2014-11-11T23:59:59Z")
+              .toArray(function(repositories){
+                console.log(repositories);
               });
-            }
-          });
-          if(noMoreEvents) break;
-        }
-     });
-     return commitsNumber;
-    }
-  }
+  
 };
+
+// GhApiConnector.prototype.getCommits = function(username) {
+
+//   var ghrepouri = gitUrlUsers + username + '/repos?per_page=100&client_id='+client_id+'&client_secret='+client_secret;
+  
+//   $.getJSON(ghrepouri, function(repositories){
+//     if(repositories.length === 0){
+//       return -1;
+//     }
+//     else{
+//       var commitsNumber=0;
+//       $.each(repositories, function (index){
+//         var repoName =repositories[index].name;
+//         var noMoreEvents = false;
+//         for(var i=1; i < 11; i++){
+//           $.getJSON('https://api.github.com/repos/'+ username +'/'+repoName+'/events?page='+ i +'&client_id='+this.client_id+'&client_secret='+ this.client_secret ,
+//           function (events){
+//             if(events.length === 0 ){
+//               noMoreEvents = true;
+//             }
+//             else{
+//               $.each(events, function (index){
+//                 if(events[index]['type'] == 'PushEvent'){
+//                   commits = events[index]['payload']['commits'];
+//                   commitsNumber += commits.length;
+//                 }
+//               });
+//             }
+//           });
+//           if(noMoreEvents) break;
+//         }
+//      });
+//      return commitsNumber;
+//     }
+//   }
+// };
 
 module.exports = GhApiConnector;
 

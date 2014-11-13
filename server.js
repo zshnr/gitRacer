@@ -7,6 +7,12 @@ var GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 
+var connectorPath = require('./src/GhApiConnector');
+var connector = new connectorPath();
+
+// connector.validateUserName('Scully87');
+// connector.getCommits('Scully87');
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
@@ -25,6 +31,20 @@ if (!module.parent) {
     console.log("Node app is running at localhost:" + app.get('port'))
   });
 };
+
+io.on('connection', function(socket){
+	console.log('a user conected');
+	socket.on('disconnect', function(){
+    console.log('user disconnected');
+	});
+});
+
+io.on('connection', function(socket){
+	socket.on('validate user', function(username){
+		var isUserValid = connector.validateUserName(username);
+		socket.emit('validate result', isUserValid);
+	});
+});
 
 // io.on('connection', function(socket) {
 //   setInterval(function() {

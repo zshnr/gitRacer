@@ -13,15 +13,15 @@ $(document).ready(function(){
         });
     });
 
-      $('#sign-in-button').on('click', function(event) {
-        event.preventDefault();
-          $('.sign-in').fadeOut(1500, function() {
-          $('#bar1').delay(350).fadeIn();
-          $('#bar2').delay(750).fadeIn();
-          $('#bar3').delay(1250).fadeIn();
-          $('#bar4').delay(1750).fadeIn();
-          });
-      });
+      // $('#sign-in-button').on('click', function(event) {
+      //   event.preventDefault();
+      //     $('.sign-in').fadeOut(1500, function() {
+      //     $('#bar1').delay(350).fadeIn();
+      //     $('#bar2').delay(750).fadeIn();
+      //     $('#bar3').delay(1250).fadeIn();
+      //     $('#bar4').delay(1750).fadeIn();
+      //     });
+      // });
   });
 });
 

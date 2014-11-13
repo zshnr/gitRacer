@@ -1,34 +1,471 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
-2 info using npm@2.1.7
-3 info using node@v0.10.33
-4 verbose node symlink /usr/local/bin/node
-5 verbose run-script [ 'prestart', 'start', 'poststart' ]
-6 info prestart gitRacer@1.0.0
-7 info start gitRacer@1.0.0
-8 verbose unsafe-perm in lifecycle true
-9 info gitRacer@1.0.0 Failed to exec start script
-10 verbose stack Error: gitRacer@1.0.0 start: `node server.js`
-10 verbose stack Exit status 8
-10 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:212:16)
-10 verbose stack     at ChildProcess.emit (events.js:98:17)
-10 verbose stack     at maybeClose (child_process.js:756:16)
-10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:823:5)
-11 verbose pkgid gitRacer@1.0.0
-12 verbose cwd /Users/timscully/projects_directory/gitRacer
-13 error Darwin 13.4.0
-14 error argv "node" "/usr/local/bin/npm" "start"
-15 error node v0.10.33
-16 error npm  v2.1.7
-17 error code ELIFECYCLE
-18 error gitRacer@1.0.0 start: `node server.js`
-18 error Exit status 8
-19 error Failed at the gitRacer@1.0.0 start script.
-19 error This is most likely a problem with the gitRacer package,
-19 error not with npm itself.
-19 error Tell the author that this fails on your system:
-19 error     node server.js
-19 error You can get their info via:
-19 error     npm owner ls gitRacer
-19 error There is likely additional logging output above.
-20 verbose exit [ 1, true ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'github-commits' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'github-commits', null ]
+6 verbose cache add name=undefined spec="github-commits" args=["github-commits",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'github-commits',
+7 verbose parsed url   path: 'github-commits',
+7 verbose parsed url   href: 'github-commits' }
+8 silly lockFile 86da0e29-github-commits github-commits
+9 verbose lock github-commits /Users/ananogal/.npm/86da0e29-github-commits.lock
+10 silly lockFile 86da0e29-github-commits github-commits
+11 silly lockFile 86da0e29-github-commits github-commits
+12 verbose addNamed [ 'github-commits', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 46beeaa9-github-commits github-commits@
+15 verbose lock github-commits@ /Users/ananogal/.npm/46beeaa9-github-commits.lock
+16 silly addNameRange { name: 'github-commits', range: '*', hasData: false }
+17 verbose request where is /github-commits
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 75637d747825b8e6
+20 verbose url raw /github-commits
+21 verbose url resolving [ 'https://registry.npmjs.org/', './github-commits' ]
+22 verbose url resolved https://registry.npmjs.org/github-commits
+23 verbose request where is https://registry.npmjs.org/github-commits
+24 info trying registry request attempt 1 at 13:54:02
+25 verbose etag "4W3YNEQ7ISZXIIZDTDNIULV52"
+26 http GET https://registry.npmjs.org/github-commits
+27 http 304 https://registry.npmjs.org/github-commits
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Thu, 13 Nov 2014 13:54:02 GMT',
+28 silly registry.get     server: 'Apache',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'last-modified': 'Thu, 13 Nov 2014 13:54:03 GMT',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     etag: '"4W3YNEQ7ISZXIIZDTDNIULV52"',
+28 silly registry.get     age: '0',
+28 silly registry.get     'x-served-by': 'cache-lcy1131-LCY',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1415886842.940942,VS0,VE353',
+28 silly registry.get     vary: 'Accept',
+28 silly registry.get     'content-length': '0',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 verbose etag https://registry.npmjs.org/github-commits from cache
+30 silly addNameRange number 2 { name: 'github-commits', range: '*', hasData: true }
+31 silly addNameRange versions [ 'github-commits',
+31 silly addNameRange   [ '0.0.2',
+31 silly addNameRange     '0.0.3',
+31 silly addNameRange     '0.0.4',
+31 silly addNameRange     '0.0.5',
+31 silly addNameRange     '0.0.6',
+31 silly addNameRange     '0.0.7',
+31 silly addNameRange     '0.0.8',
+31 silly addNameRange     '0.0.9',
+31 silly addNameRange     '0.0.10' ] ]
+32 verbose addNamed [ 'github-commits', '0.0.10' ]
+33 verbose addNamed [ '0.0.10', '0.0.10' ]
+34 silly lockFile 11c683c6-github-commits-0-0-10 github-commits@0.0.10
+35 verbose lock github-commits@0.0.10 /Users/ananogal/.npm/11c683c6-github-commits-0-0-10.lock
+36 silly lockFile 11c683c6-github-commits-0-0-10 github-commits@0.0.10
+37 silly lockFile 11c683c6-github-commits-0-0-10 github-commits@0.0.10
+38 silly lockFile 46beeaa9-github-commits github-commits@
+39 silly lockFile 46beeaa9-github-commits github-commits@
+40 silly resolved [ { name: 'github-commits',
+40 silly resolved     description: 'Framework to get users and organization commit stats from github',
+40 silly resolved     version: '0.0.10',
+40 silly resolved     author:
+40 silly resolved      { name: 'Tim Chaplin',
+40 silly resolved        email: 'tim.chaplin@ticktockdevelopment.com' },
+40 silly resolved     repository:
+40 silly resolved      { type: 'git',
+40 silly resolved        url: 'https://github.com/tjchaplin/github-commits.git' },
+40 silly resolved     homepage: 'https://github.com/tjchaplin/github-commits.git',
+40 silly resolved     devDependencies:
+40 silly resolved      { mocha: '*',
+40 silly resolved        should: '*',
+40 silly resolved        grunt: '~0.4.1',
+40 silly resolved        'grunt-contrib-jshint': '~0.4.3',
+40 silly resolved        'grunt-contrib-watch': '~0.4.0',
+40 silly resolved        'grunt-release': '~0.3.3' },
+40 silly resolved     browserDependencies: {},
+40 silly resolved     dependencies: { yaenumerable: '~1.0.1', async: '0.2.9' },
+40 silly resolved     keywords: [ 'git', 'github', 'gh', 'commits', 'statistics', 'monitor' ],
+40 silly resolved     engines: { node: '>= 0.2.0' },
+40 silly resolved     main: './lib/gitCommitsApi.js',
+40 silly resolved     directories: { test: 'tests', lib: 'lib' },
+40 silly resolved     scripts: { test: 'mocha tests/*' },
+40 silly resolved     license: 'MIT',
+40 silly resolved     readme: '#GitHub-Commits\n\n  Framework to get users and organization commit stats from github\n\n[![Build Status](https://travis-ci.org/tjchaplin/github-commits.png)](https://travis-ci.org/tjchaplin/github-commits)\n\n##Purpose\n\n  A simple framework to get users and organization commit stats from github.  Can filter stats by a date range. Can be used to integrate, git stats into a dashboard.\n\n  Inspired by one of Fred George\'s talk on Programmer Anarchy, in which his team has a dashboard indicating commits for a week.\n\n##Install\n\n  `npm install github-commits`\n\n##Examples\n\n###Get Current Week GitHub repository commits for a user\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .currentWeekCommits()\n              .toArray(function(repositories){\n                console.log(repositories);\n              });\n  ```\n  \n###Sum Current Week Commits for a user\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .currentWeekCommits()\n              .sumCommits(function(sum){\n                console.log(sum);\n              });\n  ```\n###Sum Open Issues for a user for current week commits\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .currentWeekCommits()\n              .sumOpenIssues(function(sum){\n                console.log(sum);\n              });\n  ```\n  \n###Get Commits for a user Until/Up to a Certain Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsUntil("2020-12-31T23:59:59Z")\n              .toArray(function(repositories){\n                console.log(repositories);\n              });\n  ```\n  \n###Sum Commits for a user Until/Up to a Certain Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsUntil("2020-12-31T23:59:59Z")\n              .sumCommits(function(sum){\n                console.log(sum);\n              });\n  ```\n  \n###Sum Open Issues for a user Until/Upa Certain Commit Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsUntil("2020-12-31T23:59:59Z")\n              .sumOpenIssues(function(sum){\n                console.log(sum);\n              });\n  ```\n  \n###Get Commits for a user Since a Certain Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsSince("2013-01-01T23:59:59Z")\n              .toArray(function(repositories){\n                console.log(repositories);\n              });\n  ```\n  \n###Sum Commits for a user Since a Certain Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsSince("2013-01-01T23:59:59Z")\n              .sumCommits(function(sum){\n                console.log(sum);\n              });\n  ```\n###Sum Open Issues for a user Since a Certain Commit Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsSince("2013-01-01T23:59:59Z")\n              .sumOpenIssues(function(sum){\n                console.log(sum);\n              });\n  ```\n###Get Commits for a user between a Set of Dates\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsBetween("2013-01-01T23:59:59Z","2020-12-31T23:59:59Z")\n              .toArray(function(repositories){\n                console.log(repositories);\n              });\n  ```\n  \n###Sum Commits for a user between a Set of Dates\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsBetween("2013-01-01T23:59:59Z","2020-12-31T23:59:59Z")\n              .sumCommits(function(sum){\n                console.log(sum);\n              });\n  ```\n###Sum Open Issues for a user between a Set of Commit Dates\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsBetween("2013-01-01T23:59:59Z","2020-12-31T23:59:59Z")\n              .sumOpenIssues(function(sum){\n                console.log(sum);\n              });\n  ```\n\n###Get Current Week GitHub repository commits for an org\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("github")\n              .currentWeekCommits()\n              .toArray(function(repositories){\n                console.log(repositories);\n              });\n  ```\n  \n###Sum Current Week Commits for an org\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("github")\n              .currentWeekCommits()\n              .sumCommits(function(sum){\n                console.log(sum);\n              });\n  ```\n###Sum Open Issues for an org for current week commits\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("github")\n              .currentWeekCommits()\n              .sumOpenIssues(function(sum){\n                console.log(sum);\n              });\n  ```\n  \n###Get Commits for an org Until/Up to a Certain Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forUser("tjchaplin")\n              .commitsUntil("2020-12-31T23:59:59Z")\n              .toArray(function(repositories){\n                console.log(repositories);\n              });\n  ```\n  \n###Sum Commits for an org Until/Up to a Certain Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("github")\n              .commitsUntil("2020-12-31T23:59:59Z")\n              .sumCommits(function(sum){\n                console.log(sum);\n              });\n  ```\n  \n###Sum Open Issues for an org Until/Upa Certain Commit Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("github")\n              .commitsUntil("2020-12-31T23:59:59Z")\n              .sumOpenIssues(function(sum){\n                console.log(sum);\n              });\n  ```\n  \n###Get Commits for an org Since a Certain Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("tjchaplin")\n              .commitsSince("2013-01-01T23:59:59Z")\n              .toArray(function(repositories){\n                console.log(repositories);\n              });\n  ```\n  \n###Sum Commits for an org Since a Certain Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("github")\n              .commitsSince("2013-01-01T23:59:59Z")\n              .sumCommits(function(sum){\n                console.log(sum);\n              });\n  ```\n###Sum Open Issues for an org Since a Certain Commit Date\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("github")\n              .commitsSince("2013-01-01T23:59:59Z")\n              .sumOpenIssues(function(sum){\n                console.log(sum);\n              });\n  ```\n###Get Commits for an org between a Set of Dates\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("tjchaplin")\n              .commitsBetween("2013-01-01T23:59:59Z","2020-12-31T23:59:59Z")\n              .toArray(function(repositories){\n                console.log(repositories);\n              });\n  ```\n  \n###Sum Commits for an org between a Set of Dates\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("github")\n              .commitsBetween("2013-01-01T23:59:59Z","2020-12-31T23:59:59Z")\n              .sumCommits(function(sum){\n                console.log(sum);\n              });\n  ```\n###Sum Open Issues for an org between a Set of Commit Dates\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  var gitHubCommits = new GitHubCommits();\n\n  gitHubCommits.forOrg("github")\n              .commitsBetween("2013-01-01T23:59:59Z","2020-12-31T23:59:59Z")\n              .sumOpenIssues(function(sum){\n                console.log(sum);\n              });\n  ```\n\n\n\n###Specify an authorization key to connect with GitHub\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  //Can specify the GitHub api authorization key for the private or enterprise instance\n  var gitHubCommits = new GitHubCommits("<SOME_GITHUB_AUTHORIZATION_KEY>");\n  ```\n\n###Specify an authorization key and Specific GitHub url to connect with\n\n  ```javascript\n  var GitHubCommits = require("github-commits");\n  \n  var gitHubUrl = "https://api.github.com";\n  var apiAuthorizationKey = "<SOME_GITHUB_AUTHORIZATION_KEY>";\n  \n  //Can specify the GitHub api authorization key for the private or enterprise instance\n  var gitHubCommits = new GitHubCommits(apiAuthorizationKey,gitHubUrl);\n  ```\n\n###Specify an enterprise or private GitHub instance\n\n  ```javascript\n  var gitHubCommits = require("github-commits");\n\n  //Can specify the GitHub api authorization key for the private or enterprise instance\n  var enterpriseGitHubUrl = "https://<ENTERPISE_GITHUB_URL>";\n  var apiAuthorizationKey = "<SOME_GITHUB_AUTHORIZATION_KEY>";\n  \n  var gitHubCommits = new GitHubCommits(apiAuthorizationKey,enterpriseGitHubUrl);\n  ```\n\n###Other Examples\n\n  For additional examples see the tests.  To run them:\n  `npm test`\n  \n##Credits/Other Frameworks\n\n###API Limits\n  Github limits unauthorized requests to 60 per hour.  If you exceed the limit an error will be thrown.\n  An authorization key can be easily obtained as sepecified below, and easily used in the api\n  \n  ```javascript\n  var GitHubCommits = require("github-commits");\n  \n  var gitHubUrl = "https://api.github.com";\n  var apiAuthorizationKey = "<SOME_GITHUB_AUTHORIZATION_KEY>";\n  \n  //Can specify the GitHub api authorization key for the private or enterprise instance\n  var gitHubCommits = new GitHubCommits(apiAuthorizationKey,gitHubUrl);\n  ```\n  \n###How To Get An Authorization Code With Curl\n\n  `curl -d \'{"scopes":["repo"],"note":"Help example"}\' https://api.github.com/authorizations`\n',
+40 silly resolved     _id: 'github-commits@0.0.10',
+40 silly resolved     dist:
+40 silly resolved      { shasum: 'e5797c0368f5f6d29ca0f17f785bb8b34d93e296',
+40 silly resolved        tarball: 'http://registry.npmjs.org/github-commits/-/github-commits-0.0.10.tgz' },
+40 silly resolved     _npmVersion: '1.1.61',
+40 silly resolved     _npmUser:
+40 silly resolved      { name: 'tjchaplin',
+40 silly resolved        email: 'tim.chaplin@ticktockdevelopment.com' },
+40 silly resolved     maintainers: [ [Object] ],
+40 silly resolved     _shasum: 'e5797c0368f5f6d29ca0f17f785bb8b34d93e296',
+40 silly resolved     _from: 'github-commits@',
+40 silly resolved     _resolved: 'https://registry.npmjs.org/github-commits/-/github-commits-0.0.10.tgz',
+40 silly resolved     bugs: { url: 'https://github.com/tjchaplin/github-commits/issues' } } ]
+41 info install github-commits@0.0.10 into /Users/ananogal/Documents/Projects/gitRacer
+42 info installOne github-commits@0.0.10
+43 verbose node_modules/github-commits unbuild
+44 verbose tar unpack /Users/ananogal/.npm/github-commits/0.0.10/package.tgz
+45 silly lockFile 48e4f1c1-acer-node-modules-github-commits tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits
+46 verbose lock tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits /Users/ananogal/.npm/48e4f1c1-acer-node-modules-github-commits.lock
+47 silly lockFile 17d4b5d3-ithub-commits-0-0-10-package-tgz tar:///Users/ananogal/.npm/github-commits/0.0.10/package.tgz
+48 verbose lock tar:///Users/ananogal/.npm/github-commits/0.0.10/package.tgz /Users/ananogal/.npm/17d4b5d3-ithub-commits-0-0-10-package-tgz.lock
+49 silly gunzTarPerm modes [ '755', '644' ]
+50 silly gunzTarPerm extractEntry package.json
+51 silly gunzTarPerm extractEntry .npmignore
+52 silly gunzTarPerm extractEntry README.md
+53 silly gunzTarPerm extractEntry Gruntfile.js
+54 silly gunzTarPerm extractEntry index.js
+55 silly gunzTarPerm extractEntry .travis.yml
+56 silly gunzTarPerm extractEntry dist/github-commits-jquery-client.js
+57 silly gunzTarPerm extractEntry dist/yaenumerable.js
+58 silly gunzTarPerm extractEntry integrationTests/githubCommitsApiTests.js
+59 silly gunzTarPerm extractEntry lib/cache.js
+60 silly gunzTarPerm extractEntry lib/dateExtensions.js
+61 silly gunzTarPerm extractEntry lib/github-commits-api.js
+62 silly gunzTarPerm extractEntry lib/github-commits-enumerable.js
+63 silly gunzTarPerm extractEntry lib/github-commits-jquery.js
+64 silly gunzTarPerm extractEntry lib/github-commits.js
+65 silly gunzTarPerm extractEntry lib/github-repository-converter.js
+66 silly gunzTarPerm extractEntry lib/github-request-builder.js
+67 silly gunzTarPerm extractEntry tests/githubCommitsApiTests.js
+68 silly gunzTarPerm extractEntry tests/githubRepositoryConverterTests.js
+69 silly gunzTarPerm extractEntry tests/integrationTests.js
+70 silly gunzTarPerm extractEntry tests/sampleCommits.json
+71 silly gunzTarPerm extractEntry tests/sampleGitCommits.json
+72 silly gunzTarPerm extractEntry tests/sampleGitRepositories.json
+73 silly gunzTarPerm extractEntry tests/sampleRepositories.json
+74 silly lockFile 48e4f1c1-acer-node-modules-github-commits tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits
+75 silly lockFile 48e4f1c1-acer-node-modules-github-commits tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits
+76 silly lockFile 17d4b5d3-ithub-commits-0-0-10-package-tgz tar:///Users/ananogal/.npm/github-commits/0.0.10/package.tgz
+77 silly lockFile 17d4b5d3-ithub-commits-0-0-10-package-tgz tar:///Users/ananogal/.npm/github-commits/0.0.10/package.tgz
+78 info preinstall github-commits@0.0.10
+79 verbose readDependencies using package.json deps
+80 verbose readDependencies using package.json deps
+81 verbose cache add [ 'yaenumerable@~1.0.1', null ]
+82 verbose cache add name=undefined spec="yaenumerable@~1.0.1" args=["yaenumerable@~1.0.1",null]
+83 verbose parsed url { protocol: null,
+83 verbose parsed url   slashes: null,
+83 verbose parsed url   auth: null,
+83 verbose parsed url   host: null,
+83 verbose parsed url   port: null,
+83 verbose parsed url   hostname: null,
+83 verbose parsed url   hash: null,
+83 verbose parsed url   search: null,
+83 verbose parsed url   query: null,
+83 verbose parsed url   pathname: 'yaenumerable@~1.0.1',
+83 verbose parsed url   path: 'yaenumerable@~1.0.1',
+83 verbose parsed url   href: 'yaenumerable@~1.0.1' }
+84 verbose cache add [ 'async@0.2.9', null ]
+85 verbose cache add name=undefined spec="async@0.2.9" args=["async@0.2.9",null]
+86 verbose parsed url { protocol: null,
+86 verbose parsed url   slashes: null,
+86 verbose parsed url   auth: null,
+86 verbose parsed url   host: null,
+86 verbose parsed url   port: null,
+86 verbose parsed url   hostname: null,
+86 verbose parsed url   hash: null,
+86 verbose parsed url   search: null,
+86 verbose parsed url   query: null,
+86 verbose parsed url   pathname: 'async@0.2.9',
+86 verbose parsed url   path: 'async@0.2.9',
+86 verbose parsed url   href: 'async@0.2.9' }
+87 verbose cache add name="yaenumerable" spec="~1.0.1" args=["yaenumerable","~1.0.1"]
+88 verbose parsed url { protocol: null,
+88 verbose parsed url   slashes: null,
+88 verbose parsed url   auth: null,
+88 verbose parsed url   host: null,
+88 verbose parsed url   port: null,
+88 verbose parsed url   hostname: null,
+88 verbose parsed url   hash: null,
+88 verbose parsed url   search: null,
+88 verbose parsed url   query: null,
+88 verbose parsed url   pathname: '~1.0.1',
+88 verbose parsed url   path: '~1.0.1',
+88 verbose parsed url   href: '~1.0.1' }
+89 verbose addNamed [ 'yaenumerable', '~1.0.1' ]
+90 verbose addNamed [ null, '>=1.0.1-0 <1.1.0-0' ]
+91 silly lockFile 060f49bb-yaenumerable-1-0-1 yaenumerable@~1.0.1
+92 verbose lock yaenumerable@~1.0.1 /Users/ananogal/.npm/060f49bb-yaenumerable-1-0-1.lock
+93 verbose cache add name="async" spec="0.2.9" args=["async","0.2.9"]
+94 verbose parsed url { protocol: null,
+94 verbose parsed url   slashes: null,
+94 verbose parsed url   auth: null,
+94 verbose parsed url   host: null,
+94 verbose parsed url   port: null,
+94 verbose parsed url   hostname: null,
+94 verbose parsed url   hash: null,
+94 verbose parsed url   search: null,
+94 verbose parsed url   query: null,
+94 verbose parsed url   pathname: '0.2.9',
+94 verbose parsed url   path: '0.2.9',
+94 verbose parsed url   href: '0.2.9' }
+95 verbose addNamed [ 'async', '0.2.9' ]
+96 verbose addNamed [ '0.2.9', '0.2.9' ]
+97 silly lockFile be62480b-async-0-2-9 async@0.2.9
+98 verbose lock async@0.2.9 /Users/ananogal/.npm/be62480b-async-0-2-9.lock
+99 silly addNameRange { name: 'yaenumerable',
+99 silly addNameRange   range: '>=1.0.1-0 <1.1.0-0',
+99 silly addNameRange   hasData: false }
+100 verbose request where is /yaenumerable
+101 verbose request registry https://registry.npmjs.org/
+102 verbose url raw /yaenumerable
+103 verbose url resolving [ 'https://registry.npmjs.org/', './yaenumerable' ]
+104 verbose url resolved https://registry.npmjs.org/yaenumerable
+105 verbose request where is https://registry.npmjs.org/yaenumerable
+106 info trying registry request attempt 1 at 13:54:03
+107 verbose etag "BTLREIVGQE9QEV1VPOU91YJHZ"
+108 http GET https://registry.npmjs.org/yaenumerable
+109 verbose request where is /async
+110 verbose request registry https://registry.npmjs.org/
+111 verbose url raw /async
+112 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+113 verbose url resolved https://registry.npmjs.org/async
+114 verbose request where is https://registry.npmjs.org/async
+115 info trying registry request attempt 1 at 13:54:03
+116 verbose etag "AFEQ6U5Q5WJTJ8GNUW0RFGL1K"
+117 http GET https://registry.npmjs.org/async
+118 http 304 https://registry.npmjs.org/async
+119 silly registry.get cb [ 304,
+119 silly registry.get   { date: 'Thu, 13 Nov 2014 13:54:03 GMT',
+119 silly registry.get     server: 'Apache',
+119 silly registry.get     via: '1.1 varnish',
+119 silly registry.get     'last-modified': 'Thu, 13 Nov 2014 13:53:38 GMT',
+119 silly registry.get     'cache-control': 'max-age=60',
+119 silly registry.get     etag: '"AFEQ6U5Q5WJTJ8GNUW0RFGL1K"',
+119 silly registry.get     age: '29',
+119 silly registry.get     'x-served-by': 'cache-lcy1124-LCY',
+119 silly registry.get     'x-cache': 'HIT',
+119 silly registry.get     'x-cache-hits': '2',
+119 silly registry.get     'x-timer': 'S1415886843.684080,VS0,VE0',
+119 silly registry.get     vary: 'Accept',
+119 silly registry.get     'content-length': '0',
+119 silly registry.get     'keep-alive': 'timeout=10, max=50',
+119 silly registry.get     connection: 'Keep-Alive' } ]
+120 verbose etag https://registry.npmjs.org/async from cache
+121 silly lockFile c060db57--npmjs-org-async-async-0-2-9-tgz https://registry.npmjs.org/async/-/async-0.2.9.tgz
+122 verbose lock https://registry.npmjs.org/async/-/async-0.2.9.tgz /Users/ananogal/.npm/c060db57--npmjs-org-async-async-0-2-9-tgz.lock
+123 verbose addRemoteTarball [ 'https://registry.npmjs.org/async/-/async-0.2.9.tgz',
+123 verbose addRemoteTarball   'df63060fbf3d33286a76aaf6d55a2986d9ff8619' ]
+124 info retry fetch attempt 1 at 13:54:03
+125 verbose fetch to= /tmp/npm-593-pGnx1Ys7/registry.npmjs.org/async/-/async-0.2.9.tgz
+126 http GET https://registry.npmjs.org/async/-/async-0.2.9.tgz
+127 http 304 https://registry.npmjs.org/yaenumerable
+128 silly registry.get cb [ 304,
+128 silly registry.get   { date: 'Thu, 13 Nov 2014 13:54:03 GMT',
+128 silly registry.get     server: 'Apache',
+128 silly registry.get     via: '1.1 varnish',
+128 silly registry.get     'last-modified': 'Thu, 13 Nov 2014 13:54:03 GMT',
+128 silly registry.get     'cache-control': 'max-age=60',
+128 silly registry.get     etag: '"BTLREIVGQE9QEV1VPOU91YJHZ"',
+128 silly registry.get     age: '0',
+128 silly registry.get     'x-served-by': 'cache-lcy1131-LCY',
+128 silly registry.get     'x-cache': 'MISS',
+128 silly registry.get     'x-cache-hits': '0',
+128 silly registry.get     'x-timer': 'S1415886843.674635,VS0,VE82',
+128 silly registry.get     vary: 'Accept',
+128 silly registry.get     'content-length': '0',
+128 silly registry.get     'keep-alive': 'timeout=10, max=50',
+128 silly registry.get     connection: 'Keep-Alive' } ]
+129 verbose etag https://registry.npmjs.org/yaenumerable from cache
+130 silly addNameRange number 2 { name: 'yaenumerable',
+130 silly addNameRange   range: '>=1.0.1-0 <1.1.0-0',
+130 silly addNameRange   hasData: true }
+131 silly addNameRange versions [ 'yaenumerable',
+131 silly addNameRange   [ '0.0.1',
+131 silly addNameRange     '0.0.6',
+131 silly addNameRange     '0.0.10',
+131 silly addNameRange     '0.0.12',
+131 silly addNameRange     '0.0.13',
+131 silly addNameRange     '0.0.14',
+131 silly addNameRange     '0.0.15',
+131 silly addNameRange     '0.0.16',
+131 silly addNameRange     '0.0.17',
+131 silly addNameRange     '0.0.18',
+131 silly addNameRange     '0.0.19',
+131 silly addNameRange     '1.0.1' ] ]
+132 verbose addNamed [ 'yaenumerable', '1.0.1' ]
+133 verbose addNamed [ '1.0.1', '1.0.1' ]
+134 silly lockFile 285080c7-yaenumerable-1-0-1 yaenumerable@1.0.1
+135 verbose lock yaenumerable@1.0.1 /Users/ananogal/.npm/285080c7-yaenumerable-1-0-1.lock
+136 http 200 https://registry.npmjs.org/async/-/async-0.2.9.tgz
+137 silly lockFile 285080c7-yaenumerable-1-0-1 yaenumerable@1.0.1
+138 silly lockFile 285080c7-yaenumerable-1-0-1 yaenumerable@1.0.1
+139 silly lockFile 060f49bb-yaenumerable-1-0-1 yaenumerable@~1.0.1
+140 silly lockFile 060f49bb-yaenumerable-1-0-1 yaenumerable@~1.0.1
+141 silly lockFile c060db57--npmjs-org-async-async-0-2-9-tgz https://registry.npmjs.org/async/-/async-0.2.9.tgz
+142 silly lockFile c060db57--npmjs-org-async-async-0-2-9-tgz https://registry.npmjs.org/async/-/async-0.2.9.tgz
+143 silly lockFile be62480b-async-0-2-9 async@0.2.9
+144 silly lockFile be62480b-async-0-2-9 async@0.2.9
+145 silly resolved [ { name: 'yaenumerable',
+145 silly resolved     description: 'Yet Another Enumerable Framework',
+145 silly resolved     version: '1.0.1',
+145 silly resolved     author:
+145 silly resolved      { name: 'Tim Chaplin',
+145 silly resolved        email: 'tim.chaplin@ticktockdevelopment.com' },
+145 silly resolved     repository:
+145 silly resolved      { type: 'git',
+145 silly resolved        url: 'https://github.com/tjchaplin/YAEnumerable.git' },
+145 silly resolved     homepage: 'https://github.com/tjchaplin/YAEnumerable.git',
+145 silly resolved     devDependencies:
+145 silly resolved      { mocha: '*',
+145 silly resolved        should: '*',
+145 silly resolved        grunt: '~0.4.1',
+145 silly resolved        'grunt-contrib-jshint': '~0.4.3',
+145 silly resolved        'grunt-contrib-watch': '~0.4.0',
+145 silly resolved        'grunt-release': '~0.3.3' },
+145 silly resolved     browserDependencies: {},
+145 silly resolved     keywords: [ 'Enumerable', 'Array', 'linq' ],
+145 silly resolved     engines: { node: '>= 0.2.0' },
+145 silly resolved     main: './lib/yaenumerable.js',
+145 silly resolved     directories: { test: 'tests', lib: 'lib' },
+145 silly resolved     scripts: { test: './node_modules/mocha/bin/mocha tests/* --reporter spec' },
+145 silly resolved     license: 'MIT',
+145 silly resolved     readme: '#YAEnumerable\n\n  Yet Another Enumerable Java Script Framework\n\n[![Build Status](https://travis-ci.org/tjchaplin/YAEnumerable.png)](https://travis-ci.org/tjchaplin/YAEnumerable)\n\n##Purpose\n\n  To create and maintain a linq type JS framework.  See Credits/Other Frameworks for alternatives.\n\n##Install\n\n  ```\n  npm install yaenumerable\n  ```\n\n##Example\nEach selector will at a minimum return an item and the index of the item.\nThe index is always the last item returned in the callback.  See tests for additional examples.\n\n\n###where Condition\n  ```javascript\n  var enumerable = require("yaenumerable");\n  var anArray = [{a:1},{a:2},{a:3}];\n  \n  //aValues will now be [{a:2},{a:3}]\n  var aValues = enumerable.fromArray(anArray)\n                          .where(function(item){return item.a > 1;})\n                          .toArray();\n  ```\n\n###select\n  ```javascript\n  var enumerable = require("yaenumerable");\n  var anArray = [{a:1},{a:2},{a:3}];\n  \n  //aValues will now be [1,2,3]\n  var aValues = enumerable.fromArray(anArray)\n                          .select( function(item){ return item.a; } )\n                          .toArray();\n  ```\n\n###selectMany\n  Allows you to flatten an array\n  \n  ```javascript\n  var enumerable = require("yaenumerable");\n  var anArray = [ {a:[1,2,3]}, {a:[4,5,6]}, {a:[7,8,9]} ];\n  \n  //Will return: [1,2,3,4,5,6,7,8,9]\n  var flattenedArray = enumerable.selectMany(function(item){return item.a})\n                                 .toArray();\n  ```\n\n###first\n  ```javascript\n  var enumerable = require("yaenumerable");\n  var anArray = [{a:1},{a:2},{a:3}];\n  \n  //if no function specified will return first item:{a:1}\n  var firstObject = enumerable.fromArray(anArray).first();\n  \n  //Since function is specfied to return a, will return 1\n  var firstA = enumerable.fromArray(anArray)\n                            .first(function(item){return item.a;});\n  ```\n\n###sum\n  ```javascript\n  var enumerable = require("yaenumerable");\n\n  //sum without a selector\n  //In this case it will return 6\n  var sum = enumerable.fromArray([1,2,3]).sum();\n\n  //When specified with a selector will return the sum of that item:\n  //In this case it will return 6\n  var sumOfA = enumerable.fromArray([{a:1},{a:2},{a:3}])\n                            .sum(function(item){return item.a;});\n  ```\n\n###count\n  count items in enumerable.  Example use is with an enumerable\n  \n  ```javascript\n  var enumerable = require("yaenumerable");\n  var anArray = [1,2,3];\n  \n  //Will return 2\n  var count = enumerable.fromArray([1,2,3])\n                        .where(function(item){return item > 1;})\n                        .count();\n  ```\n\n###any\n  Determines if any items meet a condtion\n  \n  ```javascript\n  var enumerable = require("yaenumerable");\n  var anArray = [1,2,3];\n  \n  //Will return true\n  var hasItemGreaterThan1 = enumerable.fromArray([1,2,3])\n                        .any(function(item){return item > 1;});\n  \n  //Can use with a selector as well\n  var hasItemAGreaterThan1 = enumerable.fromArray([{a:1},{a:2},{a:3}])\n                        .any(function(item){return item.a > 1;});\n  \n  ```\n\n###forEach\n  ```javascript\n  var enumerable = require("yaenumerable");\n  var anArray = [{a:1},{a:2},{a:3}];\n  \n  //aValues will now be [1,2,3]\n  var aValues = enumerable.fromArray(anArray)\n                          .forEach( function(item){/*Do something useful*/})\n                          .toArray();\n  ```\n\n###asyncForEach\n  Allows you to make async calls on each item in an array and get the results of all calls when each call is complete.\n  \n  ```javascript\n  var enumerable = require("yaenumerable");\n  var anArray = [{a:1},{a:2},{a:3}];\n\n\tvar longProcess = function(item, onLongProcessComplete){\n    //Some long process\n    var result = item;\n    onLongProcessComplete(result);\n\t};\n\n\tenumerable.fromArray(anArray)\n      \t\t\t.asyncForEach(longProcess,\n                          function(results){ \n                            //results is an array with each updated item\n                            onComplete(results);\n                          });\n  ```\n  \n\n###For additional examples see the tests.  To run them:\n  ```\n  npm test\n  ```\n  \n##Credits/Other Frameworks\n  \n  * [enumerablejs - lukesmith\'s very comprehensive framework](https://github.com/lukesmith/enumerablejs.git)\n  * [enumerable - VisionMedia TJ Holowaychuk](https://github.com/component/enumerable.git)\n',
+145 silly resolved     _id: 'yaenumerable@1.0.1',
+145 silly resolved     dist:
+145 silly resolved      { shasum: 'c898c083362584813f908b49d4cb255191943213',
+145 silly resolved        tarball: 'http://registry.npmjs.org/yaenumerable/-/yaenumerable-1.0.1.tgz' },
+145 silly resolved     _npmVersion: '1.1.61',
+145 silly resolved     _npmUser:
+145 silly resolved      { name: 'tjchaplin',
+145 silly resolved        email: 'tim.chaplin@ticktockdevelopment.com' },
+145 silly resolved     maintainers: [ [Object] ],
+145 silly resolved     _shasum: 'c898c083362584813f908b49d4cb255191943213',
+145 silly resolved     _from: 'yaenumerable@~1.0.1',
+145 silly resolved     _resolved: 'https://registry.npmjs.org/yaenumerable/-/yaenumerable-1.0.1.tgz',
+145 silly resolved     bugs: { url: 'https://github.com/tjchaplin/YAEnumerable/issues' } },
+145 silly resolved   { name: 'async',
+145 silly resolved     description: 'Higher-order functions and common patterns for asynchronous code',
+145 silly resolved     main: './lib/async',
+145 silly resolved     author: { name: 'Caolan McMahon' },
+145 silly resolved     version: '0.2.9',
+145 silly resolved     repository: { type: 'git', url: 'https://github.com/caolan/async.git' },
+145 silly resolved     bugs: { url: 'https://github.com/caolan/async/issues' },
+145 silly resolved     licenses: [ [Object] ],
+145 silly resolved     devDependencies: { nodeunit: '>0.0.0', 'uglify-js': '1.2.x', nodelint: '>0.0.0' },
+145 silly resolved     jam: { main: 'lib/async.js', include: [Object] },
+145 silly resolved     scripts: { test: 'nodeunit test/test-async.js' },
+145 silly resolved     _id: 'async@0.2.9',
+145 silly resolved     dist:
+145 silly resolved      { shasum: 'df63060fbf3d33286a76aaf6d55a2986d9ff8619',
+145 silly resolved        tarball: 'http://registry.npmjs.org/async/-/async-0.2.9.tgz' },
+145 silly resolved     _from: 'async@0.2.9',
+145 silly resolved     _npmVersion: '1.2.23',
+145 silly resolved     _npmUser: { name: 'caolan', email: 'caolan.mcmahon@gmail.com' },
+145 silly resolved     maintainers: [ [Object] ],
+145 silly resolved     directories: {},
+145 silly resolved     _shasum: 'df63060fbf3d33286a76aaf6d55a2986d9ff8619',
+145 silly resolved     _resolved: 'https://registry.npmjs.org/async/-/async-0.2.9.tgz' } ]
+146 info install yaenumerable@1.0.1 into /Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits
+147 info install async@0.2.9 into /Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits
+148 info installOne yaenumerable@1.0.1
+149 info installOne async@0.2.9
+150 verbose node_modules/github-commits/node_modules/yaenumerable unbuild
+151 verbose tar unpack /Users/ananogal/.npm/yaenumerable/1.0.1/package.tgz
+152 silly lockFile 81e73fb6-ommits-node-modules-yaenumerable tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/yaenumerable
+153 verbose lock tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/yaenumerable /Users/ananogal/.npm/81e73fb6-ommits-node-modules-yaenumerable.lock
+154 silly lockFile 7fc24feb-m-yaenumerable-1-0-1-package-tgz tar:///Users/ananogal/.npm/yaenumerable/1.0.1/package.tgz
+155 verbose lock tar:///Users/ananogal/.npm/yaenumerable/1.0.1/package.tgz /Users/ananogal/.npm/7fc24feb-m-yaenumerable-1-0-1-package-tgz.lock
+156 verbose node_modules/github-commits/node_modules/async unbuild
+157 verbose tar unpack /Users/ananogal/.npm/async/0.2.9/package.tgz
+158 silly lockFile 755463ae-ithub-commits-node-modules-async tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/async
+159 verbose lock tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/async /Users/ananogal/.npm/755463ae-ithub-commits-node-modules-async.lock
+160 silly lockFile ddd6ecf4-ogal-npm-async-0-2-9-package-tgz tar:///Users/ananogal/.npm/async/0.2.9/package.tgz
+161 verbose lock tar:///Users/ananogal/.npm/async/0.2.9/package.tgz /Users/ananogal/.npm/ddd6ecf4-ogal-npm-async-0-2-9-package-tgz.lock
+162 silly gunzTarPerm modes [ '755', '644' ]
+163 silly gunzTarPerm extractEntry package.json
+164 silly gunzTarPerm modes [ '755', '644' ]
+165 silly gunzTarPerm extractEntry README.md
+166 silly gunzTarPerm extractEntry Gruntfile.js
+167 silly gunzTarPerm extractEntry package.json
+168 silly gunzTarPerm extractEntry README.md
+169 silly gunzTarPerm extractEntry LICENSE
+170 silly gunzTarPerm extractEntry component.json
+171 silly gunzTarPerm extractEntry lib/async.js
+172 silly gunzTarPerm extractEntry index.js
+173 silly gunzTarPerm extractEntry .travis.yml
+174 silly gunzTarPerm extractEntry lib/yaenumerable.js
+175 silly gunzTarPerm extractEntry tests/any.js
+176 silly gunzTarPerm extractEntry tests/count.js
+177 silly gunzTarPerm extractEntry tests/distinct.js
+178 silly gunzTarPerm extractEntry tests/first.js
+179 silly gunzTarPerm extractEntry tests/asyncForEach.js
+180 silly gunzTarPerm extractEntry tests/select.js
+181 silly gunzTarPerm extractEntry tests/selectMany.js
+182 silly gunzTarPerm extractEntry tests/sum.js
+183 silly gunzTarPerm extractEntry tests/toArray.js
+184 silly gunzTarPerm extractEntry tests/where.js
+185 silly gunzTarPerm extractEntry tests/forEach.js
+186 silly lockFile 755463ae-ithub-commits-node-modules-async tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/async
+187 silly lockFile 755463ae-ithub-commits-node-modules-async tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/async
+188 silly lockFile ddd6ecf4-ogal-npm-async-0-2-9-package-tgz tar:///Users/ananogal/.npm/async/0.2.9/package.tgz
+189 silly lockFile ddd6ecf4-ogal-npm-async-0-2-9-package-tgz tar:///Users/ananogal/.npm/async/0.2.9/package.tgz
+190 info preinstall async@0.2.9
+191 verbose readDependencies using package.json deps
+192 verbose readDependencies using package.json deps
+193 silly resolved []
+194 verbose about to build /Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/async
+195 info build /Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/async
+196 verbose linkStuff [ false,
+196 verbose linkStuff   false,
+196 verbose linkStuff   false,
+196 verbose linkStuff   '/Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules' ]
+197 info linkStuff async@0.2.9
+198 verbose linkBins async@0.2.9
+199 verbose linkMans async@0.2.9
+200 verbose rebuildBundles async@0.2.9
+201 info install async@0.2.9
+202 info postinstall async@0.2.9
+203 silly lockFile 81e73fb6-ommits-node-modules-yaenumerable tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/yaenumerable
+204 silly lockFile 81e73fb6-ommits-node-modules-yaenumerable tar:///Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/yaenumerable
+205 silly lockFile 7fc24feb-m-yaenumerable-1-0-1-package-tgz tar:///Users/ananogal/.npm/yaenumerable/1.0.1/package.tgz
+206 silly lockFile 7fc24feb-m-yaenumerable-1-0-1-package-tgz tar:///Users/ananogal/.npm/yaenumerable/1.0.1/package.tgz
+207 info preinstall yaenumerable@1.0.1
+208 verbose readDependencies using package.json deps
+209 verbose readDependencies using package.json deps
+210 silly resolved []
+211 verbose about to build /Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/yaenumerable
+212 info build /Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules/yaenumerable
+213 verbose linkStuff [ false,
+213 verbose linkStuff   false,
+213 verbose linkStuff   false,
+213 verbose linkStuff   '/Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits/node_modules' ]
+214 info linkStuff yaenumerable@1.0.1
+215 verbose linkBins yaenumerable@1.0.1
+216 verbose linkMans yaenumerable@1.0.1
+217 verbose rebuildBundles yaenumerable@1.0.1
+218 info install yaenumerable@1.0.1
+219 info postinstall yaenumerable@1.0.1
+220 verbose about to build /Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits
+221 info build /Users/ananogal/Documents/Projects/gitRacer/node_modules/github-commits
+222 verbose linkStuff [ false,
+222 verbose linkStuff   false,
+222 verbose linkStuff   false,
+222 verbose linkStuff   '/Users/ananogal/Documents/Projects/gitRacer/node_modules' ]
+223 info linkStuff github-commits@0.0.10
+224 verbose linkBins github-commits@0.0.10
+225 verbose linkMans github-commits@0.0.10
+226 verbose rebuildBundles github-commits@0.0.10
+227 verbose rebuildBundles [ 'async', 'yaenumerable' ]
+228 info install github-commits@0.0.10
+229 info postinstall github-commits@0.0.10
+230 error peerinvalid The package mocha does not satisfy its siblings' peerDependencies requirements!
+230 error peerinvalid Peer mocha-sinon@1.1.3 wants mocha@~1
+231 error System Darwin 13.4.0
+232 error command "node" "/usr/local/bin/npm" "install" "github-commits"
+233 error cwd /Users/ananogal/Documents/Projects/gitRacer
+234 error node -v v0.10.32
+235 error npm -v 1.4.28
+236 error code EPEERINVALID
+237 verbose exit [ 1, true ]

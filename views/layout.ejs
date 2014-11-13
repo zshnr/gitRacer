@@ -11,6 +11,28 @@
     <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
     <script src="js/jquery.barfiller.js" type="text/javascript"></script>
     <script src="js/interface.js" type="text/javascript"></script>
+    <script>
+      var socket = io();
+      $('#sign-in-button').on('click', function(){
+        socket.emit('validate user', $('#githubUsername').val());
+        $('#githubUsername').val('');
+        return false;
+      });
+      socket.on('validate result', function(isUserValid){
+        if (isUserValid){
+          $('.sign-in').fadeOut(1500, function() {
+          $('#bar1').delay(350).fadeIn();
+          $('#bar2').delay(750).fadeIn();
+          $('#bar3').delay(1250).fadeIn();
+          $('#bar4').delay(1750).fadeIn();
+          });
+        }
+        else {
+          $('.error').html('Invalid Github Profile');
+        }
+      });
+
+    </script> 
     <%- body %>
   </body>
 </html>
