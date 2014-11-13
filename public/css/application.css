@@ -168,7 +168,7 @@ section.bars {
     display: none;
     margin-left: auto;
     margin-right: auto;
-    width:100%;
+    width:0%;
     height:12px;
     background:#fcfcfc;
     border:1px solid #ccc;
@@ -178,16 +178,16 @@ section.bars {
     -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.5);
 }
 
-.barfiller .fill {
+/*.barfiller .fill {
     display:block;
     position:relative;
     width:0px;
     height:100%;
     background:#333;
     z-index:1;
-}
+*//*}*/
 
-.barfiller .tipWrap {
+/*.barfiller .tipWrap {
     display:none;
 }
 
@@ -212,5 +212,5 @@ section.bars {
     left:9px;
     top:100%;
     z-index:9
-}
+}*/
 
