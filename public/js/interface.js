@@ -25,7 +25,7 @@ $(document).ready(function(){
   });
 });
 
-var socket = io.connect('http://localhost')
-socket.on('updateCommit', function(data) {
-  $('.fill').attr()
-});
+// var socket = io.connect('http://localhost')
+// socket.on('updateCommit', function(data) {
+//   $('.fill').attr()
+// });

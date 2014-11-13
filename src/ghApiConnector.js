@@ -12,7 +12,7 @@ function GhApiConnector(){
 };
 
 
-GhApiConnector.prototype.validateUserName = function(username) {
+GhApiConnector.prototype.validateUserName = function(username, callback) {
   var githubUserApi = require('github');
   var githubUser = new githubUserApi({
     // required
@@ -20,19 +20,18 @@ GhApiConnector.prototype.validateUserName = function(username) {
     // optional
     debug: true,
     protocol: "https",
-    // host: "github.my-GHE-enabled-company.com",
-    // pathPrefix: "/api/v3", // for some GHEs
     timeout: 5000
   });
 
   githubUser.user.getFrom({user: username}, function(err, data){
     if (err) {
-      return false;
+      console.log("Error")
+      callback(0);
     }
     else {
-       return true;
+      console.log("OK")
+      callback(1);
     }
-    
   });
 };
 
@@ -41,7 +40,7 @@ GhApiConnector.prototype.getCommits = function(username) {
   var commits = this.github.forUser(username)
               .commitsSince("2014-11-11T23:59:59Z")
               .sumCommits(function(sum){
-                console.log(sum);
+                // console.log(sum);
               });
 
 
