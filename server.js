@@ -23,6 +23,6 @@ if (!module.parent) {
 
 io.on('connection', function(socket) {
   setInterval(function() {
-    socket.emit('updateCommit', )
-  }, 1000);
+    socket.emit('updateCommit', 1000);
+  });
 });
