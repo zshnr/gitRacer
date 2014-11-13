@@ -164,7 +164,7 @@ section.bars {
   padding-top: 160px;
 }
 
-.barfiller {
+#barfiller {
     display: none;
     margin-left: auto;
     margin-right: auto;
@@ -176,6 +176,15 @@ section.bars {
     margin-bottom:20px;
     box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.5);
     -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.5);
+}
+
+meter {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 4%;
+height: 2em;
+width: 20em;
 }
 
 /*.barfiller .fill {

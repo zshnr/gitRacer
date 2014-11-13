@@ -17,6 +17,7 @@
       var socket = io.connect('http://localhost');
 
     $(document).ready(function() {
+      $('#barfiller').progressbar({value: 0});
       $('#sign-in-button').on('click', function(event) {
         event.preventDefault();
         socket.emit('validate user', $('#githubUsername').val());
@@ -28,21 +29,15 @@
       socket.on('validate result', function(isUserValid){
         console.log('is user valid ' + isUserValid);
         if (isUserValid){
+          var count = 10;
           socket.on('commits', function(commits){
-           console.log('commits: ' + commits);
-           $('.sign-in').fadeOut(1500, function() {
-              $('#bar1').delay(350).fadeIn();
-              $('#barfiller').css({width: '0%'}).animate({
-                  width:'100%'
-                  }, {
-                       step: function(commits){
+            console.log('commits: ' + commits);
+            $('.sign-in').fadeOut(1500, function() {
+              // $('meter').hide()
+              $('meter').attr('value', commits);
 
-                       }
-                    }  
- 
-              );
-           });
-         });
+            });
+          });
        }   
        else {
           $('.error').html('Invalid Github Profile');
