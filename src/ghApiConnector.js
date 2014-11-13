@@ -40,9 +40,11 @@ GhApiConnector.prototype.getCommits = function(username) {
   var GitHubCommits = require("github-commits");
   var commits = this.github.forUser(username)
               .commitsSince("2014-11-11T23:59:59Z")
-              .toArray(function(repositories){
-                console.log(repositories);
+              .sumCommits(function(sum){
+                console.log(sum);
               });
+
+
   
 };
 

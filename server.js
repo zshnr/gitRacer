@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 var connectorPath = require('./src/GhApiConnector');
 var connector = new connectorPath();
 
-// connector.validateUserName('Scully87');
-// connector.getCommits('Scully87');
+connector.validateUserName('Scully87');
+connector.getCommits('Scully87');
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
