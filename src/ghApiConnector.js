@@ -1,7 +1,7 @@
 function GhApiConnector(){
   this.client_id = process.env.GITHUB_CLIENT_ID;
   this.client_secret = process.env.GITHUB_CLIENT_SECRET;
-  this.apiAuthorizationKey = process.env.exit;
+  this.apiAuthorizationKey = process.env.GITHUB_AUTHORIZATION_KEY;
   var GitHubCommits = require("github-commits");
   this.github = new GitHubCommits(this.apiAuthorizationKey);
 };
