@@ -7,7 +7,7 @@ var GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 
-var connectorPath = require('./src/GhApiConnector');
+var connectorPath = require('./public/js/GhApiConnector');
 var connector = new connectorPath();
 
 // connector.validateUserName('Scully87');
