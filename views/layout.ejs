@@ -21,8 +21,6 @@
       $('#sign-in-button').on('click', function(event) {
         event.preventDefault();
         socket.emit('validate user', $('#githubUsername').val());
-        $('#githubUsername').val('');
-        // return false;
       });
 
 
@@ -32,20 +30,22 @@
           var count = 10;
           socket.on('commits', function(commits){
             console.log('commits: ' + commits);
-            $('.sign-in').fadeOut(1500, function() {
-              // $('meter').hide()
+            $('.sign-in').fadeOut(200, function() {
               $('meter').attr('value', commits);
+              $('meter').delay(200).fadeIn();
+              $('h2').text($('#githubUsername').val());
+              $('h3').text('Commits Today: ' + commits + '/25')
 
             });
           });
-       }   
+       }
        else {
           $('.error').html('Invalid Github Profile');
         }
     });
-  });      
+  });
 
-    </script> 
+    </script>
     <%- body %>
   </body>
 </html>

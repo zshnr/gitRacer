@@ -2,13 +2,13 @@ function GhApiConnector(){
   this.client_id = process.env.GITHUB_CLIENT_ID;
   this.client_secret = process.env.GITHUB_CLIENT_SECRET;
   //this.gitUrlUsers = 'https://api.github.com/users/';
-   var GitHubCommits = require("github-commits");
+  var GitHubCommits = require("github-commits");
 
   var gitHubUrl = "https://api.github.com";
-  var apiAuthorizationKey = 'bf26f98fce6025767afb543fe78da47096a5d347';
+  var apiAuthorizationKey = '67d7bdf7ca6ff3f45d5fd6260e3f85f26907a719';
 
   //Can specify the GitHub api authorization key for the private or enterprise instance
-  this.github = new GitHubCommits(apiAuthorizationKey,gitHubUrl);
+  this.github = new GitHubCommits(apiAuthorizationKey);
 };
 
 
@@ -21,6 +21,12 @@ GhApiConnector.prototype.validateUserName = function(username, callback) {
     debug: true,
     protocol: "https",
     timeout: 5000
+  });
+
+  githubUser.authenticate({
+    type: "oauth",
+    key: "105a140f1cf546a14c96",
+    secret: "0720e817925e73b3f387ba2dcbe979b429a88309"
   });
 
   githubUser.user.getFrom({user: username}, function(err, data){
@@ -38,8 +44,10 @@ GhApiConnector.prototype.validateUserName = function(username, callback) {
 GhApiConnector.prototype.getCommits = function(username, callback) {
   // var GitHubCommits = require("github-commits");
   console.log('right here')
+  // var date = new Date();
+  // var time = date.toISOString();
   var commits = this.github.forUser(username)
-              .commitsSince("2014-11-11T23:59:59Z")
+              .commitsSince("2014-11-13T23:59:59Z")
               .sumCommits(function(sum){
                 console.log(sum);
                callback(sum);
@@ -49,7 +57,7 @@ GhApiConnector.prototype.getCommits = function(username, callback) {
 // GhApiConnector.prototype.getCommits = function(username) {
 
 //   var ghrepouri = gitUrlUsers + username + '/repos?per_page=100&client_id='+client_id+'&client_secret='+client_secret;
-  
+
 //   $.getJSON(ghrepouri, function(repositories){
 //     if(repositories.length === 0){
 //       return -1;
@@ -95,14 +103,14 @@ module.exports = GhApiConnector;
 //     var username = $('#ghusername').val();
 //     var source = $('#newtemplate').html();    // this is the id of the <template>
 //     var template = Handlebars.compile(source);
- 
+
 //     var ghprofuri = 'https://api.github.com/users/' + username + '?client_id=105a140f1cf546a14c96&client_secret=0720e817925e73b3f387ba2dcbe979b429a88309'
 //     var ghrepouri = 'https://api.github.com/users/' + username + '/repos?per_page=100&client_id=105a140f1cf546a14c96&client_secret=0720e817925e73b3f387ba2dcbe979b429a88309'
 //     getData();
- 
+
 //     $('#ghusername').val('')
- 
- 
+
+
 //       function getData(){
 //         $.ajax({
 //           url: ghprofuri,
@@ -116,17 +124,17 @@ module.exports = GhApiConnector;
 //                 },
 //           error: function() { alert("Profile not found!"); }
 //         });
- 
+
 //         var commits;
- 
+
 //         $.getJSON(ghrepouri, function(json){
 //            repositories = json;
 //            var temp = getCommits();
 //         });
- 
+
 //         var commitsNumber=0;
 //         var commitsHTML;
- 
+
 //         function getCommits() {
 //           if(repositories.length === 0) {
 //               commitsHTML = '<p>No commits!</p>';
@@ -155,7 +163,7 @@ module.exports = GhApiConnector;
 //                         }
 //                         console.log('I have ' + commitsPerRepo + ' commits for repo:' + repositories[index].name)
 //                       });
-                      
+
 //                       commitsHTML = '<p>'+commitsNumber+' commits!</p>';
 //                       $('#'+username+'commits').html(commitsHTML);
 //                     }
@@ -166,4 +174,4 @@ module.exports = GhApiConnector;
 //             }
 //           }
 //         }
-//     }); 
+//     });

@@ -54,7 +54,7 @@ io.on('connection', function(socket){
 					console.log('commits ' + commits)
 					socket.emit('commits', commits);
 				});
-			}, 10000);
+			}, 5000);
 		});
 	});
 });

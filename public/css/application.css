@@ -22,8 +22,8 @@ h1 {
 }
 
 .animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -webkit-animation-timing-function: ease-in-out;
@@ -73,10 +73,10 @@ section#octocat img {
 }
 
 section#octocat img {
-  -webkit-animation: pulse2 4s linear infinite;
-  -moz-animation: pulse2 4s linear infinite;
-  -ms-animation: pulse2 4s linear infinite;
-  animation: pulse2 4s linear infinite;
+  -webkit-animation: pulse2 2s linear infinite;
+  -moz-animation: pulse2 2s linear infinite;
+  -ms-animation: pulse2 2s linear infinite;
+  animation: pulse2 2s linear infinite;
 }
 
 @-moz-keyframes pulse2 {
@@ -127,7 +127,7 @@ form {
   font-weight:500;
   font-size: 18px;
   border-radius: 5px;
-  line-height: 22px;
+  line-height: 29px;
   background-color: transparent;
   border:2px solid white;
   transition: all 0.3s;
@@ -138,18 +138,21 @@ form {
   outline:0;
 }
 
-a {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  width: 100%;
+a#sign-in-button {
+  text-decoration:none;
+  position: center;
+  text-align: center;
+  width: 200px;
   background: white;
   border-radius:5px;
   border:0;
   cursor:pointer;
   color:grey;
-  font-size:24px;
+  font-size:34px;
   padding-top:10px;
   padding-bottom:10px;
-  transition: all 0.3s;
+  padding-right: 158px;
+  padding-left: 158px;
   margin-top:-4px;
   font-weight:700;
 }
@@ -160,7 +163,7 @@ a:hover { background:#CC4949  ; }
        BAR FILLER
 =========================*/
 
-section.bars {
+/*section.bars {
   padding-top: 160px;
 }
 
@@ -177,15 +180,57 @@ section.bars {
     box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.5);
     -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.5);
 }
+*/
+
+h2 {
+  font-size: 4em;
+  display: inline-block;
+  margin-top: 100px;
+  margin-bottom: 5px;
+  padding-left: 50px;
+}
+
+h3 {
+  font-size: 4em;
+  margin-bottom: 5px;
+  margin-top: 100px;
+  display: inline-block;
+  float: right;
+  padding-right: 50px;
+}
 
 meter {
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 4%;
-height: 2em;
-width: 20em;
+  display: none;
+  top: 130px;
+  width: 100%;
+  height: 45px;
+  -webkit-appearance: none; /* Reset appearance */
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #333 inset;
+}
+
+/*meter::-webkit-meter-optimum-value {
+  box-shadow: 0 5px 5px -5px #999 inset;
+  background-image: linear-gradient(
+    90deg,
+    #8bcf69 5%,
+    #e6d450 5%,
+    #e6d450 15%,
+    #f28f68 15%,
+    #f28f68 55%,
+    #cf82bf 55%,
+    #cf82bf 95%,
+    #719fd1 95%,
+    #719fd1 100%
+  );
+  background-size: 100% 100%;
+}*/
 
 /*.barfiller .fill {
     display:block;
@@ -194,9 +239,9 @@ width: 20em;
     height:100%;
     background:#333;
     z-index:1;
-*//*}*/
+}
 
-/*.barfiller .tipWrap {
+.barfiller .tipWrap {
     display:none;
 }
 
@@ -221,5 +266,6 @@ width: 20em;
     left:9px;
     top:100%;
     z-index:9
-}*/
+}
 
+*/
