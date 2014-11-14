@@ -14,7 +14,6 @@ var connector = new connectorPath();
 // connector.getCommits('Scully87');
 
 app.set('views', __dirname + '/views');
-app.set('src', __dirname + '/src');
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 app.use(require('express').static(__dirname + '/public'));
