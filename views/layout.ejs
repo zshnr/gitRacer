@@ -18,6 +18,7 @@
       var socket = io();
 
     $(document).ready(function() {
+      var arrayOfUsers = [];
       $('#barfiller').progressbar({value: 0});
       $('#sign-in-button').on('click', function(event) {
         event.preventDefault();
@@ -25,20 +26,20 @@
       });
 
       socket.on('validate result', function(isUserValid){
-        console.log('is user valid ' + isUserValid);
         if (isUserValid){
-          var username = $('#githubUsername').val();
-          var data = {'username': username};
-          var source = $('#template_meter').html();
-          var template = Handlebars.compile(source);
-          $('.bars').append(template(data));
-          console.log($('.bars'));
-          socket.on('commits', function(commits){
-            console.log('commits: ' + commits);
+          drawRacer($('#githubUsername').val());
+          arrayOfUsers.push($('#githubUsername').val());
+          socket.on('commits', function(data){
+            commits = data['commits'];
+            username = data['username'];
+            if($.inArray(username, arrayOfUsers) == -1) {
+              drawRacer(username);
+              arrayOfUsers.push(username);
+            }
             $('.sign-in').fadeOut(200, function() {
               $('#meter_' + username).attr('value', commits);
               $('#meter_' + username).delay(200).fadeIn();
-              $('#username_' + username).text($('#githubUsername').val());
+              $('#username_' + username).text(username);
               $('#commits_'+ username).text('Commits Today: ' + commits + '/25')
             });
           });
@@ -47,8 +48,15 @@
           $('.error').html('Invalid Github Profile');
         }
     });
-  });
 
+    function drawRacer(username){
+      var data = {'username': username};
+      var source = $('#template_meter').html();
+      var template = Handlebars.compile(source);
+      $('.bars').append(template(data));
+    }
+  });
+    
     </script>
     <%- body %>
   </body>

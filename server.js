@@ -26,41 +26,24 @@ app.set('port', (process.env.PORT || 3000))
 
 module.exports = server
 if (!module.parent) {
-  console.log('Server running on http://localhost:3000')
   server.listen(app.get('port'), function () {
     console.log("Node app is running at localhost:" + app.get('port'))
   });
 };
 
-// io.on('connection', function(socket){
-// 	console.log('a user conected');
-// 	socket.on('disconnect', function(){
-//     console.log('user disconnected');
-// 	});
-// });
-
 io.on('connection', function(socket){
 	socket.on('validate user', function(username){
-		console.log("I'm entering validate user")
-		console.log(username)
 		connector.validateUserName(username, function(valid){
-
-			console.log('validating results')
 			socket.emit('validate result', valid);
 				setInterval(function() {
-
-				console.log('getting commits for ' + username)
-				connector.getCommits(username, function(commits){
-					console.log('commits ' + commits)
-					socket.emit('commits', commits);
+					console.log('getting commits for ' + username)
+					connector.getCommits(username, function(commits){
+					console.log('commits ' + commits);
+					data = {'commits' : commits, 'username' : username}
+					socket.emit('commits', data);
+					socket.broadcast.emit('commits', data);
 				});
 			}, 5000);
 		});
 	});
 });
-
-// io.on('connection', function(socket) {
-//   setInterval(function() {
-//     socket.emit('updateCommit', 1000);
-//   });
-// });

@@ -42,7 +42,7 @@ GhApiConnector.prototype.getCommits = function(username, callback) {
   // var date = new Date();
   // var time = date.toISOString();
   var commits = this.github.forUser(username)
-              .commitsSince("2014-11-13T23:59:59Z")
+              .commitsSince("2014-11-14T23:59:59Z")
               .sumCommits(function(sum){
                 console.log(sum);
                callback(sum);
