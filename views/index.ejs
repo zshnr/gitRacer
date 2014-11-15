@@ -30,38 +30,16 @@
 
 <!-- ================
         BAR FILLER
+
      ================ -->
-<!-- <section class="bars"> -->
-<!-- <div id="barfiller"></div> -->
-<h2></h2>
-<h3> </h3>
-<meter value="0" min="0" max="25"><br /></meter>
-<!--   <div id="bar1" class="barfiller">
-        <div class="tipWrap">
-          <span class="tip"></span>
-        </div>
-          <span class="fill" data-percentage="0"></span>
-  </div> -->
-
-   <!--  <div id="bar2" class="barfiller">
-        <div class="tipWrap">
-      <span class="tip"></span>
-        </div>
-        <span class="fill" data-percentage="0"></span>
-    </div>
-
-    <div id="bar3" class="barfiller">
-        <div class="tipWrap">
-      <span class="tip"></span>
-        </div>
-        <span class="fill" data-percentage="0"></span>
-    </div>
-
-    <div id="bar4" class="barfiller">
-        <div class="tipWrap">
-      <span class="tip"></span>
-        </div>
-        <span class="fill" data-percentage="0"></span>
-    </div>
-<!  </div> -->
+<section class="bars">
 </section>
+
+<template id="template_meter">
+  <h2 id="username_{{username}}"></h2>
+  <h3 id="commits_{{username}}"> </h3>
+  <meter id='meter_{{username}}' value="0" min="0" max="25"><br /></meter>
+</template>
+
+
+

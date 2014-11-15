@@ -10,11 +10,12 @@
   <body>
     <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
     <script src='https://code.jquery.com/ui/1.11.2/jquery-ui.min.js'></script>
+    <script src='js/handlebars.js'></script>
     <script src="js/jquery.barfiller.js" type="text/javascript"></script>
     <script src="js/interface.js" type="text/javascript"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-      var socket = io.connect('http://localhost');
+      var socket = io();
 
     $(document).ready(function() {
       $('#barfiller').progressbar({value: 0});
@@ -23,19 +24,22 @@
         socket.emit('validate user', $('#githubUsername').val());
       });
 
-
       socket.on('validate result', function(isUserValid){
         console.log('is user valid ' + isUserValid);
         if (isUserValid){
-          var count = 10;
+          var username = $('#githubUsername').val();
+          var data = {'username': username};
+          var source = $('#template_meter').html();
+          var template = Handlebars.compile(source);
+          $('.bars').append(template(data));
+          console.log($('.bars'));
           socket.on('commits', function(commits){
             console.log('commits: ' + commits);
             $('.sign-in').fadeOut(200, function() {
-              $('meter').attr('value', commits);
-              $('meter').delay(200).fadeIn();
-              $('h2').text($('#githubUsername').val());
-              $('h3').text('Commits Today: ' + commits + '/25')
-
+              $('#meter_' + username).attr('value', commits);
+              $('#meter_' + username).delay(200).fadeIn();
+              $('#username_' + username).text($('#githubUsername').val());
+              $('#commits_'+ username).text('Commits Today: ' + commits + '/25')
             });
           });
        }
