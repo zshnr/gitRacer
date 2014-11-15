@@ -43,6 +43,8 @@
           });
        }
        else {
+          $("#sign-in-button").css("cursor", "default");
+          $("body").css("cursor", "default");
           $('.error').html('Invalid Github Profile');
         }
     });
