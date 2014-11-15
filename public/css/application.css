@@ -1,4 +1,5 @@
 body {
+  cursor: default;
   font-family: 'Contrail One', cursive;
   color: white;
   background: url("/images/background.jpg") no-repeat center center fixed;

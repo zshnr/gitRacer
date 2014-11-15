@@ -19,6 +19,8 @@
     $(document).ready(function() {
       $('#barfiller').progressbar({value: 0});
       $('#sign-in-button').on('click', function(event) {
+        $("body").css("cursor", "progress");
+        $("#sign-in-button").css("cursor", "progress");
         event.preventDefault();
         socket.emit('validate user', $('#githubUsername').val());
       });
@@ -31,6 +33,7 @@
           socket.on('commits', function(commits){
             console.log('commits: ' + commits);
             $('.sign-in').fadeOut(200, function() {
+              $("body").css("cursor", "default");
               $('meter').attr('value', commits);
               $('meter').delay(200).fadeIn();
               $('h2').text($('#githubUsername').val());
